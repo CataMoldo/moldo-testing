@@ -1,0 +1,42 @@
+:root {
+  color-scheme: light;
+  --ink: #17231f;
+  --muted: #64736d;
+  --paper: #f5f2ea;
+  --panel: #fffdf8;
+  --line: #d7dfd8;
+  --accent: #d85d38;
+  --accent-dark: #a63d22;
+  --shadow: 0 24px 70px rgba(23, 35, 31, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: radial-gradient(circle at top right, #dfece4 0, transparent 38%), var(--paper);
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.shell { width: min(960px, calc(100% - 40px)); margin: 0 auto; padding: 28px 0 42px; }
+.topbar { display: flex; justify-content: space-between; align-items: center; padding-bottom: 90px; font: 700 0.75rem/1.2 Arial, sans-serif; letter-spacing: 0.12em; }
+.eyebrow { color: var(--accent-dark); }
+.status { border: 1px solid var(--line); border-radius: 999px; padding: 8px 12px; color: var(--muted); letter-spacing: 0; font-weight: 400; }
+.hero { max-width: 720px; }
+.kicker, .panel-label { color: var(--accent-dark); font: 700 0.8rem/1.2 Arial, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; }
+h1 { max-width: 680px; margin: 18px 0; font-size: clamp(3rem, 8vw, 6.8rem); line-height: 0.94; font-weight: 500; letter-spacing: -0.04em; }
+.intro { max-width: 560px; margin: 28px 0; color: var(--muted); font: 1.15rem/1.6 Arial, sans-serif; }
+.primary-button { border: 0; border-radius: 4px; background: var(--accent); color: white; cursor: pointer; padding: 14px 18px; font: 700 0.9rem Arial, sans-serif; }
+.primary-button:hover, .primary-button:focus-visible { background: var(--accent-dark); }
+.prompt-panel { max-width: 620px; margin-top: 56px; padding: 24px; border: 1px solid var(--line); background: rgba(255, 253, 248, 0.8); box-shadow: var(--shadow); }
+.prompt-panel p { margin: 12px 0 0; font: 1rem/1.6 Arial, sans-serif; }
+footer { margin-top: 120px; color: var(--muted); font: 0.8rem Arial, sans-serif; }
+
+@media (max-width: 600px) {
+  .shell { width: min(100% - 28px, 960px); }
+  .topbar { padding-bottom: 64px; }
+  h1 { font-size: clamp(3rem, 17vw, 5rem); }
+  footer { margin-top: 80px; }
+}  
